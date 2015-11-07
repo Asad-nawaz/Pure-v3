@@ -1,0 +1,283 @@
+@mixin txt-left{
+	text-align: left;
+}
+@mixin txt-right{
+	text-align: right;
+}
+@mixin txt-center{
+	text-align: center;
+}
+
+body,input,textarea,select{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.pure-g,
+.pure-g [class*="pure-u"]{
+	font-family: 'Open Sans', sans-serif !important;
+	font-weight: 400;
+}
+body .icon{
+	font-family: "IcoMoon-Ultimate" !important;
+}
+
+a{
+	text-decoration: none !important;
+}
+label{
+	font-size: 13px !important;
+}
+
+
+#header-right{
+	@include txt-right;
+	span{
+		@include txt-center;
+		font-size: 13px;
+	}
+	a{
+		font-size: 23px;
+		line-height: 35px;
+	}
+	i{
+	    font-size: 21px;
+	}
+}
+#sidebar{
+	.sidebar-top{
+		.sidebar-top-inner{
+			text-align: center;
+		}
+	}
+}
+.sidebar-top-inner{
+	i{
+		font-size: 38px;
+	}
+	span{
+		font-size: 13px;
+	}
+}
+.sidebar-mid-sec{
+	a{
+		font-size: 12px;
+		text-align: center;
+		span{
+			color: inherit;
+		}
+	}
+}
+.sidebar-bot{
+	a{
+		font-size: 13px;
+		line-height: 33px;
+	}
+}
+.tabs-sidebar{
+	a{
+		line-height: 50px;
+	}
+}
+.contents-inner{
+	h2{
+		font-size: 17px;
+	}
+}
+.description-btn{
+	font-size: 12px;
+	line-height: 41px;
+	text-align: center;
+}
+.description-list{
+	label,
+	button,
+	textarea{
+		font-size: 16px;
+	}
+}
+
+.main-border-sec{
+	&:after{
+		pointer-events:none;
+	}
+}
+.location-sec{
+	span{
+		font-size: 12px;
+		&:after{
+			content: '';
+			font-family: 'IcoMoon-Ultimate';
+			pointer-events:none;
+		}
+	}
+	select,
+	input{
+		font-size: inherit;
+	}
+}
+.form-refrence-sec{
+	h3{
+		font-size: 14px;
+		font-weight: 700;
+	}
+	input{
+		font-size: 12px;
+	}
+}
+.loaction-sec1{
+		span{
+		&:after{
+			content: '';
+		}
+	}
+}
+.location-right-sec{
+	p{
+		font-size: 13px;
+		line-height: 1.38;
+	}
+}
+
+.icon-checkmark4{
+	font-size: 41px;
+}
+.keyword-info{
+	input{
+		font-size: 14px;
+	}
+}
+.keyword-right{
+	label > i{
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.info-sec{
+		cursor: move;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select: none;
+		line-height: 30px;
+		font-size: 12px;
+		i{
+			font-size: 19px;
+		}
+	}
+}
+.terms-outer{
+	&:before{
+		content: '';
+		font-size: 19px;
+		font-family: 'IcoMoon-Ultimate';
+	}
+}
+.individual-inner{
+	@include txt-center;
+	h4{
+		font-size: 20px;
+		line-height: 41px;
+	}
+	h3{
+		font-size: 48px;
+		line-height: 98px;
+	}
+	p{
+		font-size: 14px;
+		line-height: 32px;
+	}
+}
+/* .individual-sec{
+	h2{
+		font-family: MV Boli;
+	}
+	.individual-inner{
+		font-family: MV Boli;
+	}
+	.individual-top{
+		p,a{
+			font-family: MV Boli;
+		}
+	}
+} */
+.individual-top{
+	p{
+		font-size: 14px;
+		line-height: 1.64;
+	}
+	span{
+		font-size: 15px;
+		font-weight: 600;
+	}
+	i{
+		font-style: normal;
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+.align-right{
+	@include txt-right;
+}
+.check-btn{
+	line-height: 34px;
+	font-size: 16px;
+	@include txt-center;
+}
+
+.sites-sec{
+	h2{
+		sup{
+			font-size: 20px;
+			margin-left: 5px;
+		}
+	}
+}
+.top-inner{
+	.left{
+		p{
+			font-size: 12px;
+		}
+	}
+}
+.data-info{
+	@include txt-center;
+	p{
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	span{
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+.submit-btn-sec{
+	input{
+		font-size: 16px;
+		vertical-align: middle;
+	}
+	input[type="submit"]{
+		font-size: 25px;
+	}
+}
+
+.sites-sec{
+	.onoffswitch {
+	    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	}
+	.onoffswitch-inner:before, .onoffswitch-inner:after {
+	    line-height: 30px;
+	    font-size: 12px;
+	}
+	.onoffswitch-inner:after {
+	    @include txt-right;
+	}
+}
+.term-build-sec{
+	h3{
+		line-height: 1.4;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	p,li{
+		line-height: 1.6;
+		font-size: 14px;
+	}
+}
