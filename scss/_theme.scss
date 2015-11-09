@@ -425,3 +425,77 @@ a:focus{
 .tree-vr-border{
 	@include background-image(linear-gradient(0deg, rgba(213,213,213,1),rgba(240,240,240,0.5)));
 }
+
+
+/* Search History Page */
+
+#history-main{
+	background: #EDEDED;
+	table{
+		tr{
+			&:nth-child(even){
+				background: #F3EEEE;
+			}
+			&:nth-child(odd){
+				background: #fff;	
+			}
+		}
+		th,td{
+			color: #666;
+			border-color: #ccc;
+		}
+		th{
+			color: #fff;
+			background: #DE8585;
+		}
+		td{
+			span{
+				i{
+					border-color: #ccc;
+					background: aqua;
+				}
+			}
+		}
+	}
+}
+.search-top-sec{
+	.history-left{
+		a{
+			color: darkgray;
+		}
+	}
+	.history-right{
+		label{
+			&:before {
+			    background: #eee;
+			    box-shadow: 0px 0px 5px #bbb inset;
+			    border-color: #aaa;
+			}
+		}
+		input[type="radio"]:checked + label:before {
+		    color: #aaa;
+		}
+	}
+}
+.search-popup{
+	background: #F4F4F4;
+	border-color: #CCC;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	h4{
+		color: #14ACF0;
+		span{
+			color: #19F014;
+		}
+	}
+	p{
+		i{
+			color: #8495AF;
+		}
+		b{
+			color: #7E7E7E;
+		}
+		sup{
+			color: #14ACF0;
+		}
+	}
+}

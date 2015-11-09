@@ -780,13 +780,10 @@ label{
 .tree-hr-border{
 	width: 100%;
 	height: 2px;
-	@include background-image(linear-gradient(90deg, rgba(213,213,213,1),rgba(240,240,240,0.5)));
 }
 .tree-vr-border{
 	height: 100%;
 	width: 2px;
-	@include background-image(linear-gradient(0deg, rgba(213,213,213,1),rgba(240,240,240,0.5)));
-	display: inline-block;
 }
 .sidebar-cross{
 	position: relative;
@@ -822,5 +819,106 @@ label{
 		-ms-transform: rotateZ(180deg);
 		-o-transform: rotateZ(180deg);
 		transform: rotateZ(180deg);
+	}
+}
+
+
+/* Search History Page */
+
+#history-main{
+	padding: 10px;
+	position: relative;
+	@include border-radius(8px);
+	table{
+		margin-top: 10px;
+		th,td{
+			border: 1px solid;
+			padding: 10px;
+			vertical-align: top;
+		}
+		th{
+			&:last-child{
+				width: 150px;
+			}
+		}
+		td{
+			span{
+				display: block;
+				i{
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 2px 5px;
+					width: 16px;
+					height: 16px;
+					border: 1px solid;
+					@include border-radius(100%);
+				}
+			}
+		}
+	}
+}
+.search-top-sec{
+	padding: 10px 0 0px;
+	[class*="pure-u-"]{
+		vertical-align: middle;
+	}
+	span,a{
+		display: inline-block;
+		vertical-align: middle;
+		label{
+			display: inline-block !important;
+			vertical-align: middle;
+		}
+	}
+	.history-left{
+		a{
+			margin: 0 5px;
+		}
+	}
+	.history-right{
+		span{
+			margin: 0 5px;
+		}
+		input{
+			display: none;
+		}
+		label{
+			margin-bottom: 0 !important;
+			padding-left: 20px;
+			position: relative;
+			&:before {
+			    content: "";
+			    width: 15px;
+			    height: 15px;
+			    display: block;
+			    border: 1px solid;
+			    border-radius: 100%;
+			    position: absolute;
+			    left: -1px;
+			    top: 50%;
+			    -webkit-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			    -o-transform: translateY(-50%);
+			    transform: translateY(-50%);
+			}
+
+		}
+		input[type="radio"]:checked + label:before {
+		    content: "•";
+		}
+	}
+}
+.search-popup{
+	position: absolute;
+	padding: 15px;
+	border: 1px solid;
+	border-radius: 8px;
+	z-index: 9;
+	p{
+		margin-bottom: 15px;
+		sup{
+			margin: 20px;
+			display: inline-block;
+		}
 	}
 }
