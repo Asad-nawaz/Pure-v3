@@ -351,10 +351,16 @@ label{
 		th{
 			font-size: 16px;
 			font-weight: 600;
+			&:first-child{
+				text-align: center;
+			}
 		}
 		td{
 			i.icon-star-full{
 				font-size: 22px;
+			}
+			&:first-child{
+				text-align: center;
 			}
 			&.name{
 				p{
@@ -446,5 +452,14 @@ label{
 		font-size: 18px;
 		font-weight: 600;
 		line-height: 1.6;
+	}
+}
+
+.shorlist-sec{
+	input{
+		font-size: 14px;
+	}
+	button{
+		line-height: 40px;
 	}
 }

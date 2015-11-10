@@ -196,6 +196,7 @@ a:focus{
 	button{
 		background: $darkgray_color;
 		color: $white_color;
+		box-shadow: none;
 		&:hover{
 			background: #00AFF2;
 		}
@@ -219,6 +220,10 @@ a:focus{
 	}
 }
 .form-refrence-sec{
+	background: rgb(223, 223, 223);
+	h3{
+	    border-bottom: 3px double rgb(204, 204, 204);
+	}
 	input{
 		@include box-shadow(none);
 		color: #757575;
@@ -367,7 +372,7 @@ a:focus{
 }
 .submit-btn-sec{
 	input{
-
+		box-shadow: none;
 		background: $darkgray_color;
 		color: $white_color;
 		&:hover{
@@ -529,6 +534,16 @@ a:focus{
 		th,td{
 			color: #666;
 			border-color: #ccc;
+			span{
+				label{
+					background-image: url(../images/check.png);
+					background-repeat: no-repeat;
+					background-position: 0 -34px;
+				}
+				input[type="checkbox"]:checked + label{
+					background-position: 0 0;
+				}
+			}
 		}
 		th{
 			color: #fff;
@@ -641,6 +656,7 @@ a:focus{
 		}
 	}
 	input{
+		box-shadow: none;
 		border-color: #ccc;
 		background: #fff;
 		color: #aaa;
@@ -671,5 +687,20 @@ a:focus{
 		border-color: #fff;
 		box-shadow: 0 0 8px #5895cd;
 		color: #fff;
+	}
+}
+
+.shorlist-sec{
+	background: #ccc;
+	&:before{
+		border-color: #ccc transparent #ccc;
+	}
+	input{
+		box-shadow: none;
+	}
+	button{
+		background: #f1f1f1;
+		color: #aaa;
+		border-color: #ccc;
 	}
 }

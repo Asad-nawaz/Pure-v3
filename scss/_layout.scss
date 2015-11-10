@@ -359,7 +359,6 @@ label{
 		width: 116px;
 		padding: 0px;
 		height: 34px;
-		box-shadow: none;
 		display: inline-block;
 		border: none;
 		padding: 0px 26px;
@@ -376,7 +375,7 @@ label{
 }
 
 .location-sec{
-	padding-left: 11px;
+	padding-right: 11px;
 	select,
 	input{
 		width: 100%;
@@ -426,9 +425,14 @@ label{
 	
 }
 .form-refrence-sec{
+	border-radius: 6px;
+	padding: 10px;
 	margin: 10px 0 15px;
 	h3{
-		margin: 20px 0px 0px 47px;
+	    border-bottom: 3px double;
+	    font-size: 14px;
+	    margin: 0px 0px 5px;
+	    padding-bottom: 5px;
 	}
 	input{
 		width: 100%;
@@ -670,7 +674,6 @@ label{
 .submit-btn-sec{
 	input{
 		height: 34px;
-		box-shadow: none;
 		display: inline-block;
 		padding: 0 26px;
 		margin-right: 14px;
@@ -962,27 +965,19 @@ label{
 			span{
 				display: block;
 				label{
-					background-image: url(../images/check.png);
-					background-repeat: no-repeat;
 					display: block !important;
 					margin-bottom: 0 !important;
 					width: 30px;
 					height: 34px;
-					background-position: 0 -34px;
 				}
 				input{
 					display: none;
 				}
-				input[type="checkbox"]:checked + label{
-					background-position: 0 0;
-				}
-
 			}
 		}
 		th{
 			&:first-child{
 				width: 50px;
-				text-align: center;
 			}
 			&:nth-child(2){
 				width: 41%;
@@ -991,7 +986,6 @@ label{
 		td{
 			&:first-child{
 				width: 50px;
-				text-align: center;
 			}
 			vertical-align: top;
 			span{
@@ -1154,7 +1148,6 @@ label{
 	input{
 		border: 1px solid;
 		padding: 0 10px;
-		box-shadow: none;
 		height: 30px;
 		width: 400px;
 	}
@@ -1233,14 +1226,12 @@ label{
 	@include border-radius(6px);
 	width: 60%;
 	right: 0%;
-	background: #ccc;
 	z-index: 9;
 	top: 13%;
 	&:before{
 		content: '';
 		border-width: 0 0.7em 0.7em;
 		border-style: solid;
-		border-color: #ccc transparent #ccc;
 		position: absolute;
 		bottom: 100%;
 		right: 30px;
@@ -1253,8 +1244,6 @@ label{
 		margin-right: 10px;
 	}
 	input{
-		font-size: 14px;
-		box-shadow: none;
 		height: 30px;
 		width: 200px;
 		padding: 0 10px;
@@ -1262,10 +1251,7 @@ label{
 	button{
 		width: 120px;
 		height: 40px;
-		line-height: 40px;
-		background: #f1f1f1;
-		color: #aaa;
-		border: 1px solid #ccc;
+		border: 1px solid;
 		vertical-align: bottom;
 	}
 }
