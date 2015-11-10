@@ -321,6 +321,7 @@ label{
 		input[type="radio"]:checked + label:before {
 		    font-size: 30px;
 		    line-height: 15px;
+		    letter-spacing: 2px;
 		}
 	}
 }
@@ -342,5 +343,108 @@ label{
 			font-size: 35px;
 			font-weight: 900;
 		}
+	}
+}
+/* Search Result Page */
+#result-main{
+	table.main-table{
+		th{
+			font-size: 16px;
+			font-weight: 600;
+		}
+		td{
+			i.icon-star-full{
+				font-size: 22px;
+			}
+			&.name{
+				p{
+					span{
+						font-weight: 600;
+					}
+					&:first-child{
+						i{
+							font-size: 18px;
+						}
+						b{
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.result-keytxt{
+	font-size: 15px;
+	line-height: 1.4;
+	b{
+		font-weight: 700;
+	}
+}
+.result-right{
+	i{
+		font-size: 30px;
+	}
+}
+.processing-table{
+	th{
+		font-weight: 600;
+	}
+}
+
+.result-letter-sec{
+	i.icon-cancel-circle2{
+		font-size: 20px;
+	}
+	h4{
+		font-size: 16px;
+		font-weight: 600;
+	}
+	span{
+		&:after{
+		    font-family: "IcoMoon-Ultimate";
+		    font-size: 12px;
+		}
+	}
+	input[type="submit"]{
+		font-size: 20px;
+	}
+}
+.result-email-sec{
+	i.icon-cancel-circle2{
+		font-size: 20px;
+	}
+	p,h4{
+		margin-bottom: 15px;
+	}
+	h4{
+		font-size: 16px;
+		font-weight: 600;
+	}
+	label{
+		font-size: 16px !important;
+		font-weight: 600;
+	}
+	input[type="submit"]{
+		font-size: 20px;
+	}
+}
+.result-filter-sec{
+	h3{
+		font-size: 20px;
+		font-weight: 700;
+	}
+	i.icon-cancel-circle2{
+		font-size: 20px;
+	}
+	button[type="submit"]{
+		font-size: 20px;
+	}
+}
+.filter-table{
+	td{
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.6;
 	}
 }

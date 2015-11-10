@@ -3,15 +3,8 @@
 $gray_color: #ccc;
 $darkgray_color: #707070;
 $lightgray_color: #ededed;
-$mixwhite_color: #F0F0F0;
 $white_color: #fff;
 $orange_color: #F7832F;
-$blue_color: #00aff0;
-$lightblue: #f0f3f8;
-$green_color: #91C950;
-$lightgreen: #f3feea;
-$red_color: #f00;
-$turquoise_color: #0eb4b6;
 
 /* fonts colors */
 
@@ -453,7 +446,7 @@ a:focus{
 		}
 		th{
 			color: #fff;
-			background: #DE8585;
+			background: $darkgray_color;
 		}
 		td{
 			span{
@@ -504,5 +497,159 @@ a:focus{
 		sup{
 			color: #14ACF0;
 		}
+	}
+}
+
+/* Search Result Page */
+#result-main{
+	background: #EDEDED;
+	table.main-table{
+		tr{
+			&:nth-child(even){
+				background: #F3EEEE;
+			}
+			&:nth-child(odd){
+				background: #fff;	
+			}
+		}
+		th,td{
+			color: #666;
+			border-color: #ccc;
+		}
+		th{
+			color: #fff;
+			background: #707070;
+		}
+		td{
+			span{
+				i{
+					border-color: #ccc;
+					background: aqua;
+				}
+			}
+			i.icon-star-full{
+				color: #FFC000;
+			}
+			&.name{
+				p{
+					&:first-child{
+						i{
+							color: #ed7d31;
+						}
+						b{
+							color: #fc4671;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.result-right{
+	i{
+		color: #bbb;
+		border-color: #bbb;
+		&.icon-envelop.letter{
+			color: #302f30;
+		}
+		&.icon-envelop.email{
+			color: #c97135;
+		}
+	}
+}
+.processing-sec{
+	background: #ccc;
+	&:before{
+		border-color: #ccc transparent #ccc;
+	}
+}
+.processing-table{
+	td,th{
+		border-color: #a3a3a3;
+	}
+	
+}
+
+.result-letter-sec{
+	background: #fff;
+	box-shadow: 0 0 15px #aaa;
+	i.icon-cancel-circle2{
+		background: #fff;
+	}
+	&:before{
+		border-color: #fff transparent #fff;
+	}
+	h4{
+		sup{
+			color: orange;
+		}
+	}
+	span{
+		select{
+			color: #757575;
+			background: #EDEDED;
+		}
+		&:after{
+		    background: #EDEDED;
+		}
+	}
+	input[type="submit"]{
+		background: #5895cd;
+		border-color: #fff;
+		box-shadow: 0 0 8px #5895cd;
+		color: #fff;
+	}
+}
+.result-email-sec{
+	background: #fff;
+	box-shadow: 0 0 15px #aaa;
+	i.icon-cancel-circle2{
+		background: #fff;
+	}
+	&:before{
+		border-color: #fff transparent #fff;	
+	}
+	h4{
+		border-top-color: #ccc;
+		sup{
+			color: orange;
+		}
+	}
+	label{
+		sup{
+			color: orange;
+		}
+	}
+	input{
+		border-color: #ccc;
+		background: #fff;
+		color: #aaa;
+	}
+
+	input[type="submit"]{
+		background: #5895cd;
+		border-color: #fff;
+		box-shadow: 0 0 8px #5895cd;
+		color: #fff;
+	}
+}
+
+.result-filter-sec{
+	h3{
+		border-bottom-color: #ccc;
+	}
+	background: #fff;
+	box-shadow: 0 0 15px #aaa;
+	i.icon-cancel-circle2{
+		background: #fff;
+	}
+	&:before{
+		border-color: #fff transparent #fff;	
+	}
+	button[type="submit"]{
+		background: #7a7676;
+		border-color: #fff;
+		box-shadow: 0 0 8px #5895cd;
+		color: #fff;
 	}
 }
