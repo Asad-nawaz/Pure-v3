@@ -30,10 +30,11 @@ label{
 	padding: 0 23px 27px;
 }
 .container{
-	max-width: 1250px;
+	position: relative;
+	max-width: 100%;
 	width: 100%;
-	margin: 0;
-	margin-left: 138px;
+	padding-right: 20px;
+	padding-left: 138px;
 }
 #header-wrap{
 	min-height: 50px;
@@ -251,6 +252,7 @@ label{
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	z-index: 9;
 	top: 55px;
 	width: 138px;
 	padding: 22px 0 10px;
@@ -304,12 +306,12 @@ label{
 		}
 	}
 	.main-border-sec{
-		padding: 15px;
+		padding: 15px 15px 0;
 		@include side-radius;
 		border: 4px double;
 		position: relative;
-		height: 200px;
-		overflow: auto;
+		/* height: 200px;
+		overflow: auto; */
 	}
 }
 .description-btn{
@@ -873,11 +875,10 @@ label{
 				i{
 					display: inline-block;
 					vertical-align: middle;
-					margin: 0 2px 5px;
-					width: 16px;
-					height: 16px;
-					border: 1px solid;
-					@include border-radius(100%);
+				}
+				a{
+					display: inline-block;
+					margin: 10px 4px 0;
 				}
 			}
 		}
@@ -900,6 +901,16 @@ label{
 	.history-left{
 		a{
 			margin: 0 5px;
+		}
+		.search-pagination{
+			display: inline-block;
+			li{
+				@extend .search-pagination;
+				a{
+					display: block;
+					padding: 5px 10px;
+				}
+			}
 		}
 	}
 	.history-right{
@@ -990,14 +1001,14 @@ label{
 			vertical-align: top;
 			span{
 				display: block;
-				i{
+				a{
 					display: inline-block;
 					vertical-align: middle;
-					margin: 0 2px 5px;
-					width: 16px;
-					height: 16px;
-					border: 1px solid;
-					@include border-radius(100%);
+					&[class*="icon"]{
+						margin: 5px 5px 0;
+						width: auto;
+						height: auto;
+					}
 				}
 			}
 			&.name{
@@ -1005,11 +1016,6 @@ label{
 					margin-top: 6px;
 					&:first-child{
 						margin-top: 0;
-						i,b,span{
-							display: inline-block;	
-							vertical-align: middle;
-							margin-right: 5px;
-						}
 					}
 				}
 			}
@@ -1019,6 +1025,7 @@ label{
 .result-keytxt{
 	border: 1px solid;
 	padding: 10px;
+	@include border-radius(4px);
 	margin-bottom: 15px;
 	span{
 		margin-left: 25px;
@@ -1225,16 +1232,16 @@ label{
 	padding: 10px;
 	@include border-radius(6px);
 	width: 60%;
-	right: 0%;
+	left: 0;
 	z-index: 9;
-	top: 13%;
+	top: 75px;
 	&:before{
 		content: '';
 		border-width: 0 0.7em 0.7em;
 		border-style: solid;
 		position: absolute;
 		bottom: 100%;
-		right: 30px;
+		left: 30px;
 		-webkit-transform: translateX(-50%);
 		-ms-transform: translateX(-50%);
 		-o-transform: translateX(-50%);
@@ -1260,4 +1267,89 @@ label{
 }
 .shorlist-sec span label{
 	display: block !important;
+}
+
+/*  Slideout Pages */
+.slidenote-sec{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	padding: 10px;
+	border-radius: 6px;
+	&:before{
+		content: '';
+		border-width: 0 0.7em 0.7em;
+		border-style: solid;
+		position: absolute;
+		bottom: 100%;
+		right: 30px;
+	}
+	.slidenote-inner{
+		padding: 10px;
+		border: 1px solid;
+		margin-bottom: 10px;
+		@include border-radius(6px);
+		h3{
+			margin-bottom: 15px;
+			i{
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+		}
+		label{
+			display: inline-block !important;
+		}
+		span{
+			margin: 0 0 10px 5px;
+			width: 400px;
+			display: inline-block;
+			position: relative;
+			&:after{
+				content: "";
+				pointer-events: none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				bottom: 0px;
+				padding: 8px 10px 0px;
+				border-radius: 0px 3px 3px 0px;
+			}
+		}
+		select{
+			border-radius: 6px;
+			width: 100%;
+			border: none;
+			height: 35px;
+			padding: 0 10px;
+		}
+		textarea{
+			display: block;
+			margin-bottom: 10px;
+			border: none;
+			width: 100%;
+			padding: 10px;
+		}
+		input[type="button"]{
+			display: block;
+			border: 5px solid;
+			width: auto;
+			height: auto;
+			padding: 5px 15px;
+		}
+	}
+	.slidenote-info{
+		padding: 10px;
+		border: 1px solid;
+		border-radius: 6px;
+		margin-bottom: 10px;
+		p{
+			span{
+				a{
+					margin-right: 80px;
+				}
+			}
+			margin-bottom: 15px;
+		}
+	}
 }

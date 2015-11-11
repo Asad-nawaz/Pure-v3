@@ -460,12 +460,8 @@ a:focus{
 		}
 		td{
 			span{
-				i{
-					border-color: #ccc;
-					background: aqua;
-				}
 				a{
-					color: inherit;
+					color: gray;
 					&:hover{
 						color: #00AFF0;
 					}
@@ -480,6 +476,18 @@ a:focus{
 			color: darkgray;
 			&:hover{
 				color: #E74C3C;
+			}
+		}
+		.search-pagination{
+			li{
+				a{
+					box-shadow: none;
+					color: #777;
+					background: aqua;
+					&:hover{
+						background: orange;
+					}
+				}
 			}
 		}
 	}
@@ -552,8 +560,7 @@ a:focus{
 		td{
 			span{
 				i{
-					border-color: #ccc;
-					background: aqua;
+					color: #90B8BC;
 				}
 				a{
 					color: inherit;
@@ -562,7 +569,7 @@ a:focus{
 					}
 				}
 			}
-			i.icon-star-full{
+			[class*="icon-star"]{
 				color: #FFC000;
 			}
 			&.name{
@@ -579,6 +586,10 @@ a:focus{
 			}
 		}
 	}
+}
+.result-keytxt{
+	color: gray;
+	border-color: lightgray;
 }
 .result-right{
 	i{
@@ -702,5 +713,54 @@ a:focus{
 		background: #f1f1f1;
 		color: #aaa;
 		border-color: #ccc;
+	}
+}
+
+/*  Slideout Pages */
+.slidenote-sec{
+	background: #e9e9e9;
+	box-shadow: 0 4px 10px lightgray;
+	&:before{
+		border-color: #e9e9e9 transparent #e9e9e9;
+	}
+	.slidenote-inner{
+		background: #d3d3d3;
+		border-color: #a3a3a3;
+		span{
+			&:after{
+				background: #EDEDED;
+				border-radius: 0px 3px 3px 0px;
+			}
+		}
+		select{
+			background: #EDEDED;
+			&:focus{
+				box-shadow: 0px 0px 8px #f1f;
+			}
+		}
+		textarea{
+			background: #EDEDED;
+			&:focus{
+				box-shadow: 0px 0px 8px #f1f;
+			}
+		}
+		input[type="button"]{
+			background: #5895CD;
+			border-color: #FFF;
+			box-shadow: 0px 0px 8px #5895CD;
+			color: #FFF;
+		}
+	}
+	.slidenote-info{
+		background: #fff;
+		border-color: #444;
+		p{
+			a{
+				color: #5c9be5;
+				&:hover{
+					color: orange;
+				}
+			}
+		}
 	}
 }

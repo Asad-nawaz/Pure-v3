@@ -304,12 +304,17 @@ label{
 			&:nth-child(5){
 				text-decoration: underline;
 			}
+			span{
+				a{
+					font-size: 21px;
+				}
+			}
 		}
 	}
 }
 .search-top-sec{
 	.history-left{
-		a{
+		a[class*="icon-"]{
 			font-size: 26px;
 		}
 	}
@@ -356,7 +361,7 @@ label{
 			}
 		}
 		td{
-			i.icon-star-full{
+			[class*="icon-star"]{
 				font-size: 22px;
 			}
 			&:first-child{
@@ -366,13 +371,8 @@ label{
 				p{
 					span{
 						font-weight: 600;
-					}
-					&:first-child{
-						i{
+						a{
 							font-size: 18px;
-						}
-						b{
-							font-size: 20px;
 						}
 					}
 				}
@@ -461,5 +461,39 @@ label{
 	}
 	button{
 		line-height: 40px;
+	}
+}
+
+/*  Slideout Pages */
+.slidenote-sec{
+	.slidenote-inner{
+		h3{
+			font-size: 18px;
+			font-weight: 600;
+			i{
+				cursor: pointer;
+			}
+		}
+		label{
+			font-size: 16px !important;
+		}
+		span{
+			&:after{
+				font-family: "IcoMoon-Ultimate";
+				pointer-events: none;
+				cursor: pointer;
+			}
+		}
+		input[type="button"]{
+			font-size: 20px;
+		}
+	}
+	.slidenote-info{
+		p{
+			line-height: 1.4;
+			a{
+				font-weight: 600;
+			}
+		}
 	}
 }
